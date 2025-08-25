@@ -1,0 +1,149 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .right {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+main .right p {
+  margin-bottom: 0.5rem;
+}
+
+main .right code {
+  background-color: #2b2929;
+  font-size: 1rem;
+  border-radius: 5%;
+}
+main {
+  padding-top: 4rem;
+  position: relative;
+}
+
+main .heading {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b7b9da;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  padding: 0rem 0.5rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+/* Loading Animation */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #b7b9da;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  overflow: auto;
+}
+
+main .right p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+main .right pre {
+  font-size: 1rem;
+  margin: 1rem 0rem;
+}
+
+main .right code {
+  font-size: 1rem;
+}
+
+/* Style for inline code vs block code */
+main .right p code {
+  background-color: #2b2929;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.95rem;
+}
